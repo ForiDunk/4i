@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import * as actions from '../../store/actions/actions';
+import styles from './Drawer.module.css';
 
 
 const drawer = (props) => (
@@ -10,7 +11,9 @@ const drawer = (props) => (
     onClose={props.closeDrwer}
     onOpen={props.openDrawer}
   >
-    <div>Test Drawer</div>
+    <div className={styles.Drawer}>
+      <h3>Settings</h3>
+    </div>
   </SwipeableDrawer>
 );
 
