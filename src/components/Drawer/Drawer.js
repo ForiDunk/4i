@@ -4,7 +4,11 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import * as actions from '../../store/actions/actions';
 import styles from './Drawer.module.css';
 import SettingsRounded from '@material-ui/icons/SettingsRounded';
-import IconButton from '@material-ui/core/IconButton';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import Divider from '@material-ui/core/Divider';
 
 
 const drawer = (props) => (
@@ -13,9 +17,17 @@ const drawer = (props) => (
     onClose={props.closeDrwer}
     onOpen={props.openDrawer}
   >
-    <div className={styles.Drawer}>
-      <IconButton><SettingsRounded />Settings</IconButton> 
-    </div>
+    <List className={styles.Drawer}>
+      <ListItem button>
+        <ListItemIcon>
+          <SettingsRounded />
+        </ListItemIcon>
+        <ListItemText>
+          Settings
+        </ListItemText>
+      </ListItem>
+      <Divider />
+    </List>
   </SwipeableDrawer>
 );
 
