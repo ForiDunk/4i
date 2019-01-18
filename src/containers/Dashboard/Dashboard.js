@@ -8,9 +8,7 @@ class Dashboard extends Component {
     return (
       <div>
         <Drawer />
-        <div className={styles.Dashboard}>
-          <DrawerOpenButtom /> <span className={styles.Title}>Dashboard</span>
-        </div>
+        <DrawerOpenButtom /> <span className={styles.Title}>Dashboard</span>
       </div>
     );
   }
