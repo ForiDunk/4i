@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Credits from './components/Credits/Credits';
+import Credits from '../../components/Credits/Credits';
 
-class App extends Component {
+class Dashboard extends Component {
   render() {
     return (
       <div>
@@ -12,4 +12,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Dashboard;
