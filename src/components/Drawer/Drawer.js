@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import * as actions from '../../store/actions/actions';
 import styles from './Drawer.module.css';
+import SettingsRounded from '@material-ui/icons/SettingsRounded';
+import IconButton from '@material-ui/core/IconButton';
 
 
 const drawer = (props) => (
@@ -12,7 +14,7 @@ const drawer = (props) => (
     onOpen={props.openDrawer}
   >
     <div className={styles.Drawer}>
-      <h3>Settings</h3>
+      <IconButton><SettingsRounded />Settings</IconButton> 
     </div>
   </SwipeableDrawer>
 );
