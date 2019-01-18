@@ -1,5 +1,17 @@
+.Header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.Header svg {
+  fill: #BDB3E6;
+  width: 30px;
+  height: 30px;
+}
+
 .Title {
   font-weight: 500;
   font-size: 30px;
-  vertical-align: middle;
+  color: #BDB3E6;
 }

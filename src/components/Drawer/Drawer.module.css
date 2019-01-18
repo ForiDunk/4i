@@ -1,13 +1,17 @@
 .Drawer {
   width: 200px;
   height: 100%;
-  background-color: #6a59b0;
+  background-color: #382584;
   box-sizing: border-box;
   text-align: center;
   padding-top: 10px;
 }
 
 .Drawer span {
-  color: rgba(0, 0, 0, 0.54);
+  color: #BDB3E6;
   font-weight: 500;
+}
+
+.Drawer svg {
+  fill: #BDB3E6;
 }
