@@ -6,12 +6,12 @@ import styles from './Dashboard.module.css';
 class Dashboard extends Component {
   render() {
     return (
-      <>
+      <div>
         <Drawer />
         <div className={styles.Dashboard}>
           <DrawerOpenButtom /> <span className={styles.Title}>Dashboard</span>
         </div>
-      </>
+      </div>
     );
   }
 }
