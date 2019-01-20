@@ -4,6 +4,8 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import * as actions from '../../store/actions/actions';
 import styles from './Drawer.module.css';
 import SettingsRounded from '@material-ui/icons/SettingsRounded';
+import HomeRounded from '@material-ui/icons/HomeRounded';
+import InfoRounded from '@material-ui/icons/InfoRounded';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -19,10 +21,28 @@ const drawer = (props) => (
     <List className={styles.Drawer}>
       <ListItem button>
         <ListItemIcon>
+          <HomeRounded />
+        </ListItemIcon>
+        <ListItemText>
+          Home
+        </ListItemText>
+      </ListItem>
+
+      <ListItem button>
+        <ListItemIcon>
           <SettingsRounded />
         </ListItemIcon>
         <ListItemText>
           Settings
+        </ListItemText>
+      </ListItem>
+      
+      <ListItem button>
+        <ListItemIcon>
+          <InfoRounded />
+        </ListItemIcon>
+        <ListItemText>
+          About
         </ListItemText>
       </ListItem>
     </List>
