@@ -13,7 +13,11 @@
           "type": "image/png"
       }
   ],
-  "start_url": ".",
+  "start_url": "/index.html",
+  "scope": ".",
+  "dir": "ltr",
+  "lang": "en-US",
+  "description": "Put your life in the hands of 4i app",
   "theme_color": "#382584",
   "background_color": "#382584",
   "display": "standalone",
