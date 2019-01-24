@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import { Link } from 'react-router-dom';
 import * as actions from '../../store/actions/actions';
 import styles from './Drawer.module.css';
 import SettingsRounded from '@material-ui/icons/SettingsRounded';
-import HomeRounded from '@material-ui/icons/HomeRounded';
+import SchoolRounded from '@material-ui/icons/SchoolRounded';
 import InfoRounded from '@material-ui/icons/InfoRounded';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -15,20 +16,20 @@ import ListItemText from '@material-ui/core/ListItemText';
 const drawer = (props) => (
   <SwipeableDrawer 
     open={props.open}
-    onClose={props.closeDrwer}
+    onClose={props.closeDrawer}
     onOpen={props.openDrawer}
   >
     <List className={styles.Drawer}>
-      <ListItem button>
+      <ListItem component={Link} to={'/'} button onClick={props.closeDrawer}>
         <ListItemIcon>
-          <HomeRounded />
+          <SchoolRounded />
         </ListItemIcon>
         <ListItemText>
-          Home
+          Dashboard
         </ListItemText>
       </ListItem>
 
-      <ListItem button>
+      <ListItem component={Link} to={'/settings'} button onClick={props.closeDrawer}>
         <ListItemIcon>
           <SettingsRounded />
         </ListItemIcon>
@@ -37,7 +38,7 @@ const drawer = (props) => (
         </ListItemText>
       </ListItem>
       
-      <ListItem button>
+      <ListItem component={Link} to={'/about'} button onClick={props.closeDrawer}>
         <ListItemIcon>
           <InfoRounded />
         </ListItemIcon>
@@ -58,7 +59,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     openDrawer: () => dispatch(actions.openDrawer()),
-    closeDrwer: () => dispatch(actions.closeDrawer())
+    closeDrawer: () => dispatch(actions.closeDrawer())
   };
 }
 
